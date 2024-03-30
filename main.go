@@ -1,35 +1,28 @@
 package main
 
-import (
-	"fmt"
-)
-
-type Person struct {
-	name string
-	male string
-	age  int
+type User struct {
+	UUID     int
+	surname  string
+	name     string
+	patronym string
+	age      int
 }
 
-func toString(person Person) string {
-	res := person.name + " " + person.male + " " + string(person.age)
+type Student struct {
+	student   User
+	code      string
+	course    int
+	group     int
+	faculties string
+}
 
-	fmt.Println(res)
-	return res
+type Teacher struct {
+	teacher      User
+	cafedra      string
+	faculties    string
+	science_rang string
 }
 
 func main() {
-	fmt.Println("Hi")
 
-	var a int = 3
-
-	fmt.Println(a)
-
-	Alex := Person{
-		name: "Alex",
-		male: "man",
-		age:  20,
-	}
-
-	fmt.Println(Alex)
-	toString(Alex)
 }
